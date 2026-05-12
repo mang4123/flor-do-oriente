@@ -777,6 +777,14 @@ function Guarantee() {
           </p>
           <p className="mt-6 text-accent font-semibold text-lg">O risco é todo nosso. O resultado é todo seu.</p>
         </div>
+
+        <div className="mt-10 flex justify-center">
+          <img
+            src={selosGarantia}
+            alt="Compra segura, satisfação garantida, privacidade protegida"
+            className="w-full max-w-xl object-contain"
+          />
+        </div>
       </div>
     </section>
   );
