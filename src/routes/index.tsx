@@ -68,9 +68,11 @@ function CTAButton({ children, size = "lg" }: { children: React.ReactNode; size?
 
 function SectionLabel({ children }: { children: React.ReactNode }) {
   return (
-    <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-accent/30 text-primary text-xs font-semibold uppercase tracking-[0.18em]">
-      <Sparkles className="w-3.5 h-3.5" />
-      {children}
+    <div className="inline-flex items-center gap-2.5 pl-2 pr-4 py-1.5 rounded-full border border-primary/15 bg-gradient-to-r from-background via-accent/20 to-background text-primary text-[11px] font-semibold uppercase tracking-[0.22em] shadow-soft">
+      <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-gradient-to-br from-[var(--gold)] to-primary text-primary-foreground">
+        <Sparkles className="w-3 h-3" />
+      </span>
+      <span className="bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">{children}</span>
     </div>
   );
 }
@@ -81,7 +83,7 @@ function Nav() {
   return (
     <header className="sticky top-0 z-40 backdrop-blur-md bg-background/80 border-b border-border/50">
       <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-        <img src={logo} alt="Flor do Oriente" className="h-12 md:h-14 w-auto" />
+        <img src={logo} alt="Flor do Oriente" className="h-16 md:h-20 w-auto" />
         <div className="hidden md:flex items-center gap-2 text-xs text-muted-foreground">
           <ShieldCheck className="w-4 h-4 text-cta" />
           Garantia blindada de 90 dias

@@ -35,7 +35,7 @@
   --color-gold: var(--gold);
   --color-cta: var(--cta);
   --color-cta-foreground: var(--cta-foreground);
-  --font-display: "Cormorant Garamond", serif;
+  --font-display: "Manrope", "Inter", sans-serif;
   --font-sans: "Inter", sans-serif;
 }
 
@@ -87,7 +87,8 @@
   }
   h1, h2, h3, h4 {
     font-family: var(--font-display);
-    letter-spacing: -0.01em;
+    letter-spacing: -0.025em;
+    font-weight: 700;
   }
 }
 
