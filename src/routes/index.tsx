@@ -19,6 +19,10 @@ import {
   Shield,
 } from "lucide-react";
 import frasco from "@/assets/frasco.png";
+import kit3 from "@/assets/kit-3.png";
+import kit5 from "@/assets/kit-5.png";
+import kit7 from "@/assets/kit-7.png";
+import kit12 from "@/assets/kit-12.png";
 import logo from "@/assets/logo.png";
 
 export const Route = createFileRoute("/")({
@@ -591,23 +595,23 @@ function Kits() {
     {
       id: "test", name: "Kit Teste", months: "3 meses", desc: "Apenas a Onda 1",
       from: "447", price: "297", installments: "12x de R$30,72", units: "3 frascos",
-      cta: "COMPRAR AGORA",
+      cta: "COMPRAR AGORA", image: kit3,
     },
     {
       id: "inter", name: "Kit Intermediário", months: "5 meses", desc: "Ondas 1 e 2",
       from: "680", price: "397", installments: "12x de R$41,06", units: "5 frascos",
-      cta: "COMPRAR AGORA",
+      cta: "COMPRAR AGORA", image: kit5,
     },
     {
       id: "complete", name: "Kit Completo", months: "7 meses", desc: "Todas as 3 ondas",
       from: "760", price: "547", installments: "12x de R$56,57 sem juros", units: "7 frascos",
       cta: "GARANTIR MEU KIT",
-      featured: true,
+      featured: true, image: kit7,
     },
     {
       id: "annual", name: "Kit Anual", months: "12 meses", desc: "Menor custo por mês (R$66/mês)",
       from: "1.150", price: "797", installments: "12x de R$82,43", units: "12 frascos",
-      cta: "COMPRAR AGORA",
+      cta: "COMPRAR AGORA", image: kit12,
     },
   ];
   return (
@@ -664,7 +668,7 @@ function Kits() {
               </div>
               <div className="p-6 flex-1 flex flex-col">
                 <div className="flex items-center justify-center mb-4">
-                  <img src={frasco} alt="" className="h-32 object-contain" />
+                  <img src={k.image} alt={`${k.units} Flor do Oriente`} className="h-40 object-contain" />
                 </div>
                 <p className="text-xs text-muted-foreground line-through text-center">De R${k.from},00 por</p>
                 <p className="text-center mt-1">
