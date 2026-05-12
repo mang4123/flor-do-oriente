@@ -251,8 +251,15 @@ function Pain() {
           </h2>
         </div>
         <div className="mt-12 grid md:grid-cols-2 gap-5">
-          {items.map((it) => (
-            <div key={it.t} className="p-6 rounded-2xl border border-border/60 bg-background hover:shadow-soft transition">
+          {items.map((it, i) => (
+            <div
+              key={it.t}
+              className={`p-6 rounded-2xl border transition hover:shadow-soft ${
+                i % 2 === 0
+                  ? "bg-background border-border/60"
+                  : "bg-mint-grad border-accent/30"
+              }`}
+            >
               <h3 className="text-xl font-semibold text-primary">{it.t}</h3>
               <p className="mt-2 text-foreground/75 leading-relaxed text-sm">{it.d}</p>
             </div>
@@ -333,10 +340,17 @@ function Actives() {
           </p>
         </div>
         <div className="mt-14 grid md:grid-cols-2 gap-6">
-          {list.map((a) => (
-            <div key={a.name} className="p-7 rounded-3xl border border-border/60 bg-background hover:shadow-card transition group">
+          {list.map((a, i) => (
+            <div
+              key={a.name}
+              className={`p-7 rounded-3xl border transition hover:shadow-card group ${
+                i % 2 === 0
+                  ? "bg-background border-border/60"
+                  : "bg-mint-grad border-accent/30"
+              }`}
+            >
               <div className="flex items-start gap-4">
-                <div className="w-14 h-14 rounded-2xl bg-mint-grad flex items-center justify-center shrink-0 text-primary group-hover:scale-105 transition">
+                <div className={`w-14 h-14 rounded-2xl flex items-center justify-center shrink-0 text-primary group-hover:scale-105 transition ${i % 2 === 0 ? "bg-mint-grad" : "bg-background/70"}`}>
                   <a.icon className="w-7 h-7" />
                 </div>
                 <div>
@@ -368,25 +382,34 @@ function Protocol() {
           </p>
         </div>
         <div className="mt-12 grid md:grid-cols-2 gap-6">
-          <div className="rounded-3xl bg-primary-foreground/5 border border-primary-foreground/10 p-8 backdrop-blur">
-            <Sun className="w-10 h-10 text-gold" />
-            <h3 className="mt-4 text-2xl font-semibold">Dose da manhã</h3>
-            <p className="text-accent font-medium text-sm mt-1">Proteção e ativação</p>
-            <ul className="mt-5 space-y-2 text-primary-foreground/85 text-sm">
-              <li className="flex gap-2"><Check className="w-4 h-4 text-accent shrink-0 mt-0.5" /> Trans-Resveratrol ativa as sirtuínas</li>
-              <li className="flex gap-2"><Check className="w-4 h-4 text-accent shrink-0 mt-0.5" /> Colágeno em circulação no período de maior exposição</li>
-              <li className="flex gap-2"><Check className="w-4 h-4 text-accent shrink-0 mt-0.5" /> Antioxidantes contra radicais livres, sol e poluição</li>
-            </ul>
+          <div className="relative overflow-hidden rounded-3xl border border-amber-200/30 p-8 backdrop-blur shadow-card" style={{ background: "linear-gradient(135deg, oklch(0.78 0.12 75) 0%, oklch(0.88 0.09 90) 50%, oklch(0.94 0.05 95) 100%)" }}>
+            <div className="absolute -top-10 -right-10 w-40 h-40 rounded-full bg-white/30 blur-2xl" />
+            <div className="relative">
+              <Sun className="w-10 h-10 text-amber-700" />
+              <h3 className="mt-4 text-2xl font-semibold text-amber-950">Dose da manhã</h3>
+              <p className="text-amber-800 font-medium text-sm mt-1">Proteção e ativação</p>
+              <ul className="mt-5 space-y-2 text-amber-950/85 text-sm">
+                <li className="flex gap-2"><Check className="w-4 h-4 text-amber-700 shrink-0 mt-0.5" /> Trans-Resveratrol ativa as sirtuínas</li>
+                <li className="flex gap-2"><Check className="w-4 h-4 text-amber-700 shrink-0 mt-0.5" /> Colágeno em circulação no período de maior exposição</li>
+                <li className="flex gap-2"><Check className="w-4 h-4 text-amber-700 shrink-0 mt-0.5" /> Antioxidantes contra radicais livres, sol e poluição</li>
+              </ul>
+            </div>
           </div>
-          <div className="rounded-3xl bg-primary-foreground/5 border border-primary-foreground/10 p-8 backdrop-blur">
-            <Moon className="w-10 h-10 text-accent" />
-            <h3 className="mt-4 text-2xl font-semibold">Dose da noite</h3>
-            <p className="text-accent font-medium text-sm mt-1">Reconstrução e regeneração</p>
-            <ul className="mt-5 space-y-2 text-primary-foreground/85 text-sm">
-              <li className="flex gap-2"><Check className="w-4 h-4 text-accent shrink-0 mt-0.5" /> Ácido Hialurônico restaura hidratação profunda</li>
-              <li className="flex gap-2"><Check className="w-4 h-4 text-accent shrink-0 mt-0.5" /> Vitaminas ativam a síntese noturna de colágeno</li>
-              <li className="flex gap-2"><Check className="w-4 h-4 text-accent shrink-0 mt-0.5" /> Aproveita a janela natural de regeneração do sono</li>
-            </ul>
+          <div className="relative overflow-hidden rounded-3xl border border-indigo-300/20 p-8 backdrop-blur shadow-card" style={{ background: "linear-gradient(135deg, oklch(0.25 0.08 270) 0%, oklch(0.32 0.1 285) 50%, oklch(0.4 0.12 300) 100%)" }}>
+            <div className="absolute -top-10 -right-10 w-40 h-40 rounded-full bg-indigo-200/10 blur-2xl" />
+            <div className="absolute top-6 right-8 w-1 h-1 rounded-full bg-white/80" />
+            <div className="absolute top-14 right-20 w-0.5 h-0.5 rounded-full bg-white/60" />
+            <div className="absolute top-20 right-12 w-1 h-1 rounded-full bg-white/70" />
+            <div className="relative">
+              <Moon className="w-10 h-10 text-indigo-200" />
+              <h3 className="mt-4 text-2xl font-semibold text-white">Dose da noite</h3>
+              <p className="text-indigo-200 font-medium text-sm mt-1">Reconstrução e regeneração</p>
+              <ul className="mt-5 space-y-2 text-white/85 text-sm">
+                <li className="flex gap-2"><Check className="w-4 h-4 text-indigo-200 shrink-0 mt-0.5" /> Ácido Hialurônico restaura hidratação profunda</li>
+                <li className="flex gap-2"><Check className="w-4 h-4 text-indigo-200 shrink-0 mt-0.5" /> Vitaminas ativam a síntese noturna de colágeno</li>
+                <li className="flex gap-2"><Check className="w-4 h-4 text-indigo-200 shrink-0 mt-0.5" /> Aproveita a janela natural de regeneração do sono</li>
+              </ul>
+            </div>
           </div>
         </div>
         <p className="mt-8 text-center text-accent text-sm">1 cápsula pela manhã · 1 cápsula à noite · 24h de ação contínua</p>
