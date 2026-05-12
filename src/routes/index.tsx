@@ -56,7 +56,7 @@ function CTAButton({ children, size = "lg" }: { children: React.ReactNode; size?
   return (
     <button
       onClick={() => document.getElementById("ofertas")?.scrollIntoView({ behavior: "smooth" })}
-      className={`shine whitespace-nowrap inline-flex items-center justify-center rounded-full bg-cta text-cta-foreground font-semibold shadow-cta hover:brightness-110 hover:scale-[1.02] active:scale-[0.99] transition-all uppercase tracking-wide ${
+      className={`shine-btn whitespace-nowrap inline-flex items-center justify-center rounded-full bg-cta text-cta-foreground font-semibold shadow-cta hover:brightness-110 hover:scale-[1.02] active:scale-[0.99] transition-all uppercase tracking-wide ${
         size === "xl" ? "px-8 py-5 text-sm md:text-base lg:text-lg" : "px-7 py-4 text-xs md:text-sm"
       }`}
     >
