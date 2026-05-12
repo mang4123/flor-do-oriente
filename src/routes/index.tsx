@@ -68,9 +68,8 @@ function CTAButton({ children, size = "lg" }: { children: React.ReactNode; size?
 
 function SectionLabel({ children }: { children: React.ReactNode }) {
   return (
-    <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-primary/15 bg-gradient-to-r from-background via-accent/20 to-background text-primary text-[11px] font-semibold uppercase tracking-[0.22em] shadow-soft">
-      <span className="w-1.5 h-1.5 rounded-full bg-gradient-to-br from-[var(--gold)] to-primary" />
-      <span className="bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">{children}</span>
+    <div className="relative inline-flex items-center px-5 py-2 rounded-full text-[11px] font-semibold uppercase tracking-[0.24em] text-primary bg-gradient-to-r from-accent/40 via-background to-accent/40 shadow-[0_1px_0_oklch(1_0_0/0.6)_inset,0_8px_24px_-12px_oklch(0.30_0.045_165/0.35)] ring-1 ring-primary/10 backdrop-blur">
+      <span className="bg-gradient-to-r from-primary via-[var(--gold)] to-primary bg-clip-text text-transparent">{children}</span>
     </div>
   );
 }
@@ -98,8 +97,8 @@ function Hero() {
       <div className="relative max-w-6xl mx-auto px-4 pt-12 pb-16 md:pt-20 md:pb-24 grid md:grid-cols-2 gap-10 items-center">
         <div>
           <SectionLabel>Fórmula Inovadora · Hanakōrei 24h</SectionLabel>
-          <h1 className="mt-5 text-4xl md:text-5xl lg:text-6xl font-semibold text-primary leading-[1.1] text-balance">
-            Se você já tentou colágeno e <em className="not-italic text-primary bg-accent/50 px-1.5 py-0.5 rounded-md [box-decoration-break:clone] [-webkit-box-decoration-break:clone]">não viu resultado</em>, o problema não era o colágeno.
+          <h1 className="mt-5 text-4xl md:text-5xl lg:text-6xl font-semibold text-primary leading-[1.25] text-balance">
+            Se você já tentou colágeno e <em className="not-italic text-primary bg-[linear-gradient(transparent_55%,oklch(0.78_0.075_175/0.55)_55%)] px-0.5">não viu resultado</em>, o problema não era o colágeno.
           </h1>
           <p className="mt-6 text-lg md:text-xl text-muted-foreground leading-relaxed">
             Era que sua pele ficou <strong className="text-primary">14 horas por dia sem nenhum suporte</strong>. Isso muda agora.
