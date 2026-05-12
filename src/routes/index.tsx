@@ -16,6 +16,7 @@ import {
   Lock,
   Truck,
   Award,
+  Shield,
 } from "lucide-react";
 import frasco from "@/assets/frasco.png";
 import logo from "@/assets/logo.png";
