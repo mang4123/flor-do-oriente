@@ -56,19 +56,18 @@ function CTAButton({ children, size = "lg" }: { children: React.ReactNode; size?
   return (
     <button
       onClick={() => document.getElementById("ofertas")?.scrollIntoView({ behavior: "smooth" })}
-      className={`group inline-flex items-center justify-center gap-3 rounded-full bg-cta text-cta-foreground font-semibold shadow-cta hover:brightness-110 hover:scale-[1.02] active:scale-[0.99] transition-all uppercase tracking-wide ${
+      className={`shine inline-flex items-center justify-center rounded-full bg-cta text-cta-foreground font-semibold shadow-cta hover:brightness-110 hover:scale-[1.02] active:scale-[0.99] transition-all uppercase tracking-wide ${
         size === "xl" ? "px-10 py-5 text-base md:text-lg" : "px-8 py-4 text-sm md:text-base"
       }`}
     >
       {children}
-      <span className="transition-transform group-hover:translate-x-1">→</span>
     </button>
   );
 }
 
 function SectionLabel({ children }: { children: React.ReactNode }) {
   return (
-    <div className="relative inline-flex items-center px-3.5 py-1.5 md:px-5 md:py-2 rounded-full text-[10px] md:text-[11px] font-semibold uppercase tracking-[0.2em] md:tracking-[0.24em] text-primary bg-gradient-to-r from-accent/40 via-background to-accent/40 shadow-[0_1px_0_oklch(1_0_0/0.6)_inset,0_8px_24px_-12px_oklch(0.30_0.045_165/0.35)] ring-1 ring-primary/10 backdrop-blur">
+    <div className="shine relative inline-flex items-center px-3.5 py-1.5 md:px-5 md:py-2 rounded-full text-[10px] md:text-[11px] font-semibold uppercase tracking-[0.2em] md:tracking-[0.24em] text-primary bg-gradient-to-r from-accent/40 via-background to-accent/40 shadow-[0_1px_0_oklch(1_0_0/0.6)_inset,0_8px_24px_-12px_oklch(0.30_0.045_165/0.35)] ring-1 ring-primary/10 backdrop-blur">
       <span className="bg-gradient-to-r from-primary via-[var(--gold)] to-primary bg-clip-text text-transparent">{children}</span>
     </div>
   );
