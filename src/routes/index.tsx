@@ -733,7 +733,16 @@ function Kits() {
           ))}
         </div>
 
-        <p className="mt-10 text-center text-xs text-muted-foreground max-w-2xl mx-auto">
+
+        <div className="mt-12 flex justify-center">
+          <img
+            src={selosProduto}
+            alt="Testado e validado, liberado pela ANVISA, produto natural, sem efeitos colaterais"
+            className="w-full max-w-2xl object-contain"
+          />
+        </div>
+
+        <p className="mt-8 text-center text-xs text-muted-foreground max-w-2xl mx-auto">
           Pagamento 100% seguro · Entrega em até 7 dias úteis · Parcelamento sem juros · Dados protegidos por criptografia SSL
         </p>
         <p className="text-center text-xs text-muted-foreground mt-2">
