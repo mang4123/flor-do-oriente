@@ -83,7 +83,7 @@ function Nav() {
     "Frete grátis para todo Brasil",
     "Garantia de 90 dias",
     "+12.000 mulheres transformadas",
-    "Sem parabenos ou sulfatos",
+    "Único com ação 24h",
     "Pagamento seguro",
   ];
   return (
