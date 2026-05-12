@@ -155,4 +155,40 @@
     70%  { transform: skewX(-18deg) translateX(450%); opacity: 1; }
     100% { transform: skewX(-18deg) translateX(450%); opacity: 0; }
   }
+
+  /* Premium wide shine for CTA buttons — green tones, covers ~half the button */
+  .shine-btn {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+  }
+  .shine-btn::after {
+    content: "";
+    position: absolute;
+    top: -60%;
+    bottom: -60%;
+    left: -60%;
+    width: 55%;
+    background: linear-gradient(
+      105deg,
+      transparent 0%,
+      oklch(0.85 0.16 145 / 0) 15%,
+      oklch(0.92 0.14 145 / 0.35) 35%,
+      oklch(1 0.05 145 / 0.75) 50%,
+      oklch(0.92 0.14 145 / 0.35) 65%,
+      oklch(0.85 0.16 145 / 0) 85%,
+      transparent 100%
+    );
+    transform: skewX(-22deg) translateX(0);
+    animation: shine-btn-sweep 4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    pointer-events: none;
+    mix-blend-mode: screen;
+    filter: blur(3px);
+  }
+  @keyframes shine-btn-sweep {
+    0%   { transform: skewX(-22deg) translateX(0); opacity: 0; }
+    15%  { opacity: 1; }
+    75%  { transform: skewX(-22deg) translateX(380%); opacity: 1; }
+    100% { transform: skewX(-22deg) translateX(380%); opacity: 0; }
+  }
 }
