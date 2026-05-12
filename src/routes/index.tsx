@@ -501,8 +501,8 @@ function Waves() {
             </div>
           ))}
         </div>
-        <div className="mt-10 rounded-2xl border-l-4 border-gold bg-gold/10 p-6 text-sm text-foreground/85 leading-relaxed">
-          <strong className="text-primary">⚠️ Atenção:</strong> a maioria das mulheres que não vê resultado abandona entre a 4ª e a 6ª semana, exatamente quando a Onda 1 termina e o corpo se prepara para a Onda 2. Por isso o <strong>kit de 7 meses</strong> é o recomendado — ele cobre as 3 ondas completas.
+        <div className="mt-10 rounded-2xl border-l-4 border-orange-500 bg-gradient-to-r from-orange-50 via-amber-50 to-orange-50 p-6 text-sm text-orange-950/90 leading-relaxed shadow-sm">
+          <strong className="text-orange-700">⚠️ Atenção:</strong> a maioria das mulheres que não vê resultado abandona entre a 4ª e a 6ª semana, exatamente quando a Onda 1 termina e o corpo se prepara para a Onda 2. Por isso o <strong>kit de 7 meses</strong> é o recomendado — ele cobre as 3 ondas completas.
         </div>
         <div className="mt-10 text-center">
           <CTAButton>Quero começar minha transformação</CTAButton>
