@@ -24,6 +24,8 @@ import kit5 from "@/assets/kit-5.png";
 import kit7 from "@/assets/kit-7.png";
 import kit12 from "@/assets/kit-12.png";
 import garantiaSeal from "@/assets/garantia-90d.png";
+import selosProduto from "@/assets/selos-produto.png";
+import selosGarantia from "@/assets/selos-garantia.png";
 import logo from "@/assets/logo.png";
 
 export const Route = createFileRoute("/")({
