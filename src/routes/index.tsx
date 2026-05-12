@@ -121,32 +121,36 @@ function Hero() {
           </div>
         </div>
 
-        <div className="relative">
+        <div className="relative mx-auto max-w-md">
           <div className="absolute -inset-10 bg-mint-grad opacity-30 blur-3xl rounded-full" />
           <img
             src={frasco}
             alt="Frasco Flor do Oriente — Complexo Hanakōrei 24h"
-            className="relative w-full max-w-md mx-auto drop-shadow-[0_30px_50px_oklch(0.30_0.045_165/0.35)]"
+            className="relative w-full mx-auto drop-shadow-[0_30px_50px_oklch(0.30_0.045_165/0.35)]"
           />
-          <div className="absolute top-4 -left-2 md:left-0 bg-card shadow-card rounded-2xl px-4 py-3 text-xs font-medium rotate-[-6deg]">
-            <div className="text-primary font-semibold">60 cápsulas</div>
-            <div className="text-muted-foreground">Manhã + Noite</div>
+
+          {/* Top-left */}
+          <div className="absolute top-2 left-0 md:-left-6 bg-card shadow-card rounded-2xl px-3.5 py-2.5 text-xs font-medium rotate-[-5deg] ring-1 ring-border/50">
+            <div className="text-primary font-semibold flex items-center gap-1.5"><Sparkles className="w-3.5 h-3.5 text-gold" /> 7 ativos</div>
+            <div className="text-muted-foreground text-[11px]">em 1 cápsula</div>
           </div>
-          <div className="absolute top-1/3 -right-3 md:-right-2 bg-card shadow-card rounded-2xl px-4 py-3 text-xs font-medium rotate-[4deg]">
-            <div className="text-primary font-semibold flex items-center gap-1"><Award className="w-3.5 h-3.5 text-gold" /> Selo ANVISA</div>
-            <div className="text-muted-foreground">Fórmula registrada</div>
+
+          {/* Top-right */}
+          <div className="absolute top-2 right-0 md:-right-6 bg-card shadow-card rounded-2xl px-3.5 py-2.5 text-xs font-medium rotate-[5deg] ring-1 ring-border/50">
+            <div className="text-primary font-semibold flex items-center gap-1.5"><Award className="w-3.5 h-3.5 text-gold" /> Selo ANVISA</div>
+            <div className="text-muted-foreground text-[11px]">Fórmula registrada</div>
           </div>
-          <div className="absolute bottom-24 -left-3 md:left-0 bg-card shadow-card rounded-2xl px-4 py-3 text-xs font-medium rotate-[-4deg]">
-            <div className="text-primary font-semibold flex items-center gap-1"><Sparkles className="w-3.5 h-3.5 text-gold" /> 7 ativos</div>
-            <div className="text-muted-foreground">em 1 cápsula</div>
+
+          {/* Bottom-left */}
+          <div className="absolute bottom-6 left-0 md:-left-6 bg-card shadow-card rounded-2xl px-3.5 py-2.5 text-xs font-medium rotate-[-4deg] ring-1 ring-border/50">
+            <div className="text-primary font-semibold flex items-center gap-1.5"><Star className="w-3 h-3 fill-gold text-gold" /> +12.000</div>
+            <div className="text-muted-foreground text-[11px]">mulheres</div>
           </div>
-          <div className="absolute bottom-8 -right-2 md:right-2 bg-card shadow-card rounded-2xl px-4 py-3 text-xs font-medium rotate-[5deg]">
-            <div className="text-primary font-semibold flex items-center gap-1"><Star className="w-3 h-3 fill-gold text-gold" /> +12.000 mulheres</div>
-            <div className="text-muted-foreground">resultado em ondas</div>
-          </div>
-          <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-card shadow-card rounded-2xl px-4 py-3 text-xs font-medium rotate-[-2deg]">
-            <div className="text-primary font-semibold flex items-center gap-1"><Shield className="w-3.5 h-3.5 text-cta" /> Garantia 90 dias</div>
-            <div className="text-muted-foreground">Risco zero</div>
+
+          {/* Bottom-right */}
+          <div className="absolute bottom-6 right-0 md:-right-6 bg-card shadow-card rounded-2xl px-3.5 py-2.5 text-xs font-medium rotate-[4deg] ring-1 ring-border/50">
+            <div className="text-primary font-semibold flex items-center gap-1.5"><Shield className="w-3.5 h-3.5 text-cta" /> Garantia</div>
+            <div className="text-muted-foreground text-[11px]">90 dias</div>
           </div>
         </div>
       </div>
