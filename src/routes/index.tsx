@@ -76,6 +76,16 @@ function SectionLabel({ children }: { children: React.ReactNode }) {
 /* ---------- sections ---------- */
 
 function Nav() {
+  const benefits = [
+    "100% Natural",
+    "Aprovado por dermatologistas",
+    "Resultados em 14 dias",
+    "Frete grátis para todo Brasil",
+    "Garantia de 90 dias",
+    "+12.000 mulheres transformadas",
+    "Sem parabenos ou sulfatos",
+    "Pagamento seguro",
+  ];
   return (
     <header className="sticky top-0 z-40 backdrop-blur-md bg-background/80 border-b border-border/50">
       <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-center md:justify-between">
@@ -83,6 +93,18 @@ function Nav() {
         <div className="hidden md:flex items-center gap-2 text-xs text-muted-foreground">
           <ShieldCheck className="w-4 h-4 text-cta" />
           Garantia blindada de 90 dias
+        </div>
+      </div>
+      <div className="bg-gradient-to-r from-deep via-[oklch(0.35_0.05_165)] to-deep text-primary-foreground overflow-hidden border-y border-primary/20">
+        <div className="flex whitespace-nowrap animate-marquee py-2">
+          {[...benefits, ...benefits, ...benefits].map((b, i) => (
+            <div key={i} className="flex items-center gap-2 px-6 text-[11px] md:text-xs font-medium tracking-wide shrink-0">
+              <span className="flex items-center justify-center w-4 h-4 rounded-full bg-cta/90 shrink-0">
+                <Check className="w-2.5 h-2.5 text-cta-foreground" strokeWidth={3.5} />
+              </span>
+              <span>{b}</span>
+            </div>
+          ))}
         </div>
       </div>
     </header>
