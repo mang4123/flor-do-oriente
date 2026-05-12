@@ -49,10 +49,12 @@ function Countdown() {
   }, []);
   const pad = (n: number) => n.toString().padStart(2, "0");
   return (
-    <div className="inline-flex items-center gap-2 font-mono text-2xl md:text-3xl font-semibold text-primary">
-      <span className="bg-primary text-primary-foreground rounded-md px-3 py-2">{pad(t.h)}</span>:
-      <span className="bg-primary text-primary-foreground rounded-md px-3 py-2">{pad(t.m)}</span>:
-      <span className="bg-primary text-primary-foreground rounded-md px-3 py-2">{pad(t.s)}</span>
+    <div className="inline-flex items-baseline gap-1.5 font-mono text-xl md:text-2xl font-semibold text-primary tabular-nums">
+      <span>{pad(t.h)}</span>
+      <span className="text-primary/40">:</span>
+      <span>{pad(t.m)}</span>
+      <span className="text-primary/40">:</span>
+      <span>{pad(t.s)}</span>
     </div>
   );
 }
@@ -627,24 +629,56 @@ function Kits() {
           <p className="mt-5 text-foreground/80 leading-relaxed">
             Para resultado real e duradouro nas rugas e flacidez, o mínimo recomendado é o <strong>kit de 7 meses</strong>, que cobre as 3 ondas completas.
           </p>
-          <div className="mt-8 inline-flex flex-col items-center gap-3 bg-card rounded-2xl px-6 py-5 shadow-soft border border-border/60">
-            <div className="flex items-center gap-2 text-sm uppercase tracking-wider text-muted-foreground">
-              <Clock className="w-4 h-4" /> Oferta com desconto encerra em
+          <div className="mt-8 inline-flex items-center gap-3 bg-card/70 rounded-full px-5 py-2.5 border border-border/50">
+            <div className="flex items-center gap-1.5 text-[11px] uppercase tracking-[0.18em] text-muted-foreground">
+              <Clock className="w-3.5 h-3.5" /> Oferta encerra em
             </div>
             <Countdown />
           </div>
         </div>
 
-        <div className="mt-12 rounded-3xl bg-card border border-border/60 p-6 md:p-8 shadow-soft max-w-3xl mx-auto">
-          <p className="text-sm font-semibold text-primary uppercase tracking-wider mb-4">Você recebe ao iniciar o protocolo:</p>
-          <ul className="grid sm:grid-cols-2 gap-y-2 gap-x-6 text-sm text-foreground/85">
-            <li className="flex gap-2"><Check className="w-4 h-4 text-cta shrink-0 mt-0.5" /> Frascos do Complexo Hanakōrei 24h</li>
-            <li className="flex gap-2"><Check className="w-4 h-4 text-cta shrink-0 mt-0.5" /> BÔNUS Guia "Protocolo 24h" (R$97)</li>
-            <li className="flex gap-2"><Check className="w-4 h-4 text-cta shrink-0 mt-0.5" /> BÔNUS Grupo VIP WhatsApp (R$197)</li>
-            <li className="flex gap-2"><Check className="w-4 h-4 text-cta shrink-0 mt-0.5" /> BÔNUS E-book "7 hábitos" (R$47)</li>
-            <li className="flex gap-2"><Check className="w-4 h-4 text-cta shrink-0 mt-0.5" /> Entrega rastreada para todo o Brasil</li>
-            <li className="flex gap-2"><Check className="w-4 h-4 text-cta shrink-0 mt-0.5" /> Garantia blindada de 90 dias</li>
+        <div className="mt-12 rounded-3xl bg-card border-2 border-cta/30 p-6 md:p-8 shadow-card max-w-3xl mx-auto relative overflow-hidden">
+          <div className="absolute top-0 right-0 bg-cta text-cta-foreground text-[10px] md:text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-bl-2xl">
+            🎁 Tudo incluso
+          </div>
+          <p className="text-base md:text-lg font-bold text-primary mb-1">Ao iniciar o protocolo, você leva também:</p>
+          <p className="text-sm text-muted-foreground mb-5">3 bônus exclusivos + frete + garantia, sem custo adicional</p>
+          <ul className="space-y-2.5 text-sm">
+            <li className="flex items-center gap-3 pb-2.5 border-b border-border/40">
+              <Check className="w-5 h-5 text-cta shrink-0" />
+              <span className="flex-1 text-foreground/90">Frascos do <strong>Complexo Hanakōrei 24h</strong></span>
+              <span className="text-xs font-semibold text-primary">incluso</span>
+            </li>
+            <li className="flex items-center gap-3 pb-2.5 border-b border-border/40">
+              <Check className="w-5 h-5 text-cta shrink-0" />
+              <span className="flex-1 text-foreground/90">BÔNUS · Guia "Protocolo 24h"</span>
+              <span className="text-xs"><span className="line-through text-muted-foreground">R$97</span> <span className="font-bold text-cta">GRÁTIS</span></span>
+            </li>
+            <li className="flex items-center gap-3 pb-2.5 border-b border-border/40">
+              <Check className="w-5 h-5 text-cta shrink-0" />
+              <span className="flex-1 text-foreground/90">BÔNUS · Grupo VIP no WhatsApp</span>
+              <span className="text-xs"><span className="line-through text-muted-foreground">R$197</span> <span className="font-bold text-cta">GRÁTIS</span></span>
+            </li>
+            <li className="flex items-center gap-3 pb-2.5 border-b border-border/40">
+              <Check className="w-5 h-5 text-cta shrink-0" />
+              <span className="flex-1 text-foreground/90">BÔNUS · E-book "7 hábitos da pele jovem"</span>
+              <span className="text-xs"><span className="line-through text-muted-foreground">R$47</span> <span className="font-bold text-cta">GRÁTIS</span></span>
+            </li>
+            <li className="flex items-center gap-3 pb-2.5 border-b border-border/40">
+              <Check className="w-5 h-5 text-cta shrink-0" />
+              <span className="flex-1 text-foreground/90">Entrega rastreada para todo o Brasil</span>
+              <span className="text-xs font-bold text-cta">FRETE GRÁTIS</span>
+            </li>
+            <li className="flex items-center gap-3">
+              <Check className="w-5 h-5 text-cta shrink-0" />
+              <span className="flex-1 text-foreground/90">Garantia blindada de 90 dias</span>
+              <span className="text-xs font-semibold text-primary">incluso</span>
+            </li>
           </ul>
+          <div className="mt-5 pt-4 border-t-2 border-dashed border-cta/40 flex items-center justify-between">
+            <span className="text-sm font-semibold text-primary">Valor total em bônus:</span>
+            <span className="text-lg font-bold text-cta">+R$341 grátis</span>
+          </div>
         </div>
 
         <div className="mt-12 grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -716,11 +750,11 @@ function Guarantee() {
         <h2 className="mt-5 text-3xl md:text-4xl font-semibold text-primary text-balance">
           Você não perde nada ao tentar
         </h2>
-        <div className="mt-16 relative rounded-3xl bg-deep text-primary-foreground p-10 md:p-14 pt-20 md:pt-24">
+        <div className="mt-24 md:mt-28 relative rounded-3xl bg-deep text-primary-foreground p-10 md:p-14 pt-24 md:pt-24">
           <img
             src={garantiaSeal}
             alt="Garantia de 90 dias - Satisfação garantida"
-            className="absolute -top-16 left-1/2 -translate-x-1/2 w-32 h-32 object-contain drop-shadow-2xl"
+            className="absolute -top-20 left-1/2 -translate-x-1/2 w-36 h-36 object-contain drop-shadow-2xl"
           />
 
           <h3 className="mt-6 text-2xl md:text-3xl font-semibold text-accent">90 dias · Satisfação blindada</h3>
