@@ -68,10 +68,8 @@ function CTAButton({ children, size = "lg" }: { children: React.ReactNode; size?
 
 function SectionLabel({ children }: { children: React.ReactNode }) {
   return (
-    <div className="inline-flex items-center gap-2.5 pl-2 pr-4 py-1.5 rounded-full border border-primary/15 bg-gradient-to-r from-background via-accent/20 to-background text-primary text-[11px] font-semibold uppercase tracking-[0.22em] shadow-soft">
-      <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-gradient-to-br from-[var(--gold)] to-primary text-primary-foreground">
-        <Sparkles className="w-3 h-3" />
-      </span>
+    <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-primary/15 bg-gradient-to-r from-background via-accent/20 to-background text-primary text-[11px] font-semibold uppercase tracking-[0.22em] shadow-soft">
+      <span className="w-1.5 h-1.5 rounded-full bg-gradient-to-br from-[var(--gold)] to-primary" />
       <span className="bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">{children}</span>
     </div>
   );
@@ -100,8 +98,8 @@ function Hero() {
       <div className="relative max-w-6xl mx-auto px-4 pt-12 pb-16 md:pt-20 md:pb-24 grid md:grid-cols-2 gap-10 items-center">
         <div>
           <SectionLabel>Fórmula Inovadora · Hanakōrei 24h</SectionLabel>
-          <h1 className="mt-5 text-4xl md:text-5xl lg:text-6xl font-semibold text-primary leading-[1.05] text-balance">
-            Se você já tentou colágeno e <em className="not-italic text-accent-foreground/90 bg-accent/40 px-2 rounded">não viu resultado</em>, o problema não era o colágeno.
+          <h1 className="mt-5 text-4xl md:text-5xl lg:text-6xl font-semibold text-primary leading-[1.1] text-balance">
+            Se você já tentou colágeno e <em className="not-italic text-primary bg-accent/50 px-1.5 py-0.5 rounded-md [box-decoration-break:clone] [-webkit-box-decoration-break:clone]">não viu resultado</em>, o problema não era o colágeno.
           </h1>
           <p className="mt-6 text-lg md:text-xl text-muted-foreground leading-relaxed">
             Era que sua pele ficou <strong className="text-primary">14 horas por dia sem nenhum suporte</strong>. Isso muda agora.
