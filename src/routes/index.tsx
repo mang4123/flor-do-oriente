@@ -89,7 +89,7 @@ function Nav() {
   return (
     <header className="sticky top-0 z-40 backdrop-blur-md bg-background/80 border-b border-border/50">
       <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-center md:justify-between">
-        <img src={logo} alt="Flor do Oriente" className="h-24 md:h-32 w-auto" />
+        <img src={logo} alt="Flor do Oriente" className="h-20 md:h-24 w-auto" />
         <div className="hidden md:flex items-center gap-2 text-xs text-muted-foreground">
           <ShieldCheck className="w-4 h-4 text-cta" />
           Garantia blindada de 90 dias
@@ -806,7 +806,7 @@ function Footer() {
   return (
     <footer className="bg-background border-t border-border/60 py-12">
       <div className="max-w-4xl mx-auto px-4 text-center">
-        <img src={logo} alt="Flor do Oriente" className="h-24 mx-auto" />
+        <img src={logo} alt="Flor do Oriente" className="h-20 mx-auto" />
         <p className="mt-3 text-sm text-muted-foreground">Complexo Hanakōrei 24h</p>
         <p className="mt-8 text-xs text-muted-foreground/80 leading-relaxed max-w-2xl mx-auto">
           Este produto não é um medicamento e não se destina a diagnosticar, tratar, curar ou prevenir doenças. Resultados podem variar conforme histórico de saúde, estilo de vida e consistência de uso. O produto não substitui acompanhamento médico. Grávidas e lactantes devem consultar o médico antes de usar. As afirmações sobre pesquisas científicas referem-se a estudos disponíveis na literatura médica. Garantia de 90 dias a partir da data de recebimento.
