@@ -24,6 +24,8 @@ import kit5 from "@/assets/kit-5.png";
 import kit7 from "@/assets/kit-7.png";
 import kit12 from "@/assets/kit-12.png";
 import garantiaSeal from "@/assets/garantia-90d.png";
+import selosProduto from "@/assets/selos-produto.png";
+import selosGarantia from "@/assets/selos-garantia.png";
 import logo from "@/assets/logo.png";
 
 export const Route = createFileRoute("/")({
@@ -731,7 +733,16 @@ function Kits() {
           ))}
         </div>
 
-        <p className="mt-10 text-center text-xs text-muted-foreground max-w-2xl mx-auto">
+
+        <div className="mt-12 flex justify-center">
+          <img
+            src={selosProduto}
+            alt="Testado e validado, liberado pela ANVISA, produto natural, sem efeitos colaterais"
+            className="w-full max-w-2xl object-contain"
+          />
+        </div>
+
+        <p className="mt-8 text-center text-xs text-muted-foreground max-w-2xl mx-auto">
           Pagamento 100% seguro · Entrega em até 7 dias úteis · Parcelamento sem juros · Dados protegidos por criptografia SSL
         </p>
         <p className="text-center text-xs text-muted-foreground mt-2">
@@ -765,6 +776,14 @@ function Guarantee() {
             Devolvemos cada centavo em até 7 dias úteis. Sem perguntas, sem formulário, sem burocracia.
           </p>
           <p className="mt-6 text-accent font-semibold text-lg">O risco é todo nosso. O resultado é todo seu.</p>
+        </div>
+
+        <div className="mt-10 flex justify-center">
+          <img
+            src={selosGarantia}
+            alt="Compra segura, satisfação garantida, privacidade protegida"
+            className="w-full max-w-xl object-contain"
+          />
         </div>
       </div>
     </section>
