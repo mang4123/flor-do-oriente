@@ -108,7 +108,7 @@
     background-position: 0 0, 20px 10px;
   }
 
-  /* Marker highlight — mint/teal stroke with tick marks at start & end */
+  /* Marker highlight — mint/teal stroke */
   .marker {
     background-image: linear-gradient(
       to bottom,
@@ -117,16 +117,13 @@
       oklch(0.78 0.075 175 / 0.55) 90%,
       transparent 90%
     );
-    padding: 0 0.35em;
+    padding: 0 0.2em;
     color: var(--primary);
     box-decoration-break: clone;
     -webkit-box-decoration-break: clone;
-    box-shadow:
-      inset 0.14em 0 0 0 oklch(0.55 0.09 175 / 0.85),
-      inset -0.14em 0 0 0 oklch(0.55 0.09 175 / 0.85);
   }
 
-  /* Shimmer sweep on badges & buttons */
+  /* Elegant diagonal shine sweep on badges & buttons */
   .shine {
     position: relative;
     overflow: hidden;
@@ -135,21 +132,27 @@
   .shine::after {
     content: "";
     position: absolute;
-    inset: 0;
+    top: -50%;
+    bottom: -50%;
+    left: -75%;
+    width: 50%;
     background: linear-gradient(
-      110deg,
-      transparent 30%,
+      100deg,
+      transparent 0%,
+      oklch(1 0 0 / 0) 35%,
       oklch(1 0 0 / 0.55) 50%,
-      transparent 70%
+      oklch(1 0 0 / 0) 65%,
+      transparent 100%
     );
-    transform: translateX(-120%);
-    animation: shine-sweep 3.2s ease-in-out infinite;
+    transform: skewX(-18deg) translateX(0);
+    animation: shine-sweep 3.5s ease-in-out infinite;
     pointer-events: none;
-    mix-blend-mode: overlay;
+    filter: blur(2px);
   }
   @keyframes shine-sweep {
-    0%   { transform: translateX(-120%); }
-    60%  { transform: translateX(120%); }
-    100% { transform: translateX(120%); }
+    0%   { transform: skewX(-18deg) translateX(0); opacity: 0; }
+    20%  { opacity: 1; }
+    70%  { transform: skewX(-18deg) translateX(450%); opacity: 1; }
+    100% { transform: skewX(-18deg) translateX(450%); opacity: 0; }
   }
 }
