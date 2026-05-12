@@ -23,6 +23,7 @@ import kit3 from "@/assets/kit-3.png";
 import kit5 from "@/assets/kit-5.png";
 import kit7 from "@/assets/kit-7.png";
 import kit12 from "@/assets/kit-12.png";
+import garantiaSeal from "@/assets/garantia-90d.png";
 import logo from "@/assets/logo.png";
 
 export const Route = createFileRoute("/")({
@@ -715,10 +716,13 @@ function Guarantee() {
         <h2 className="mt-5 text-3xl md:text-4xl font-semibold text-primary text-balance">
           Você não perde nada ao tentar
         </h2>
-        <div className="mt-10 relative rounded-3xl bg-deep text-primary-foreground p-10 md:p-14">
-          <div className="absolute -top-10 left-1/2 -translate-x-1/2 w-20 h-20 rounded-full bg-gold flex items-center justify-center shadow-card">
-            <ShieldCheck className="w-10 h-10 text-deep" />
-          </div>
+        <div className="mt-16 relative rounded-3xl bg-deep text-primary-foreground p-10 md:p-14 pt-20 md:pt-24">
+          <img
+            src={garantiaSeal}
+            alt="Garantia de 90 dias - Satisfação garantida"
+            className="absolute -top-16 left-1/2 -translate-x-1/2 w-32 h-32 object-contain drop-shadow-2xl"
+          />
+
           <h3 className="mt-6 text-2xl md:text-3xl font-semibold text-accent">90 dias · Satisfação blindada</h3>
           <p className="mt-5 text-primary-foreground/85 leading-relaxed">
             Use o Complexo Hanakōrei 24h por 90 dias seguindo o protocolo: uma cápsula pela manhã, uma à noite. Se ao final desses 90 dias você não notar a sua pele mais hidratada, mais firme e visivelmente mais jovem, basta enviar um e-mail para <strong className="text-accent">contato@flordooriente.com.br</strong>.
