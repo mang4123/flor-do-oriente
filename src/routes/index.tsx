@@ -97,8 +97,8 @@ function Hero() {
       <div className="relative max-w-6xl mx-auto px-4 pt-12 pb-16 md:pt-20 md:pb-24 grid md:grid-cols-2 gap-10 items-center">
         <div>
           <SectionLabel>Fórmula Inovadora · Hanakōrei 24h</SectionLabel>
-          <h1 className="mt-5 text-4xl md:text-5xl lg:text-6xl font-semibold text-primary leading-[1.25] text-balance">
-            Se você já tentou colágeno e <em className="not-italic text-primary bg-[linear-gradient(transparent_55%,oklch(0.78_0.075_175/0.55)_55%)] px-0.5">não viu resultado</em>, o problema não era o colágeno.
+          <h1 className="mt-5 text-4xl md:text-5xl lg:text-6xl font-semibold text-primary leading-[1.15] text-balance">
+            Se você já tentou colágeno e <em className="not-italic text-primary bg-[linear-gradient(to_bottom,transparent_8%,oklch(0.78_0.075_175/0.55)_8%,oklch(0.78_0.075_175/0.55)_92%,transparent_92%)] px-1">não viu resultado</em>, o problema não era o colágeno.
           </h1>
           <p className="mt-6 text-lg md:text-xl text-muted-foreground leading-relaxed">
             Era que sua pele ficou <strong className="text-primary">14 horas por dia sem nenhum suporte</strong>. Isso muda agora.
