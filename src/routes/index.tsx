@@ -16,6 +16,7 @@ import {
   Lock,
   Truck,
   Award,
+  Shield,
 } from "lucide-react";
 import frasco from "@/assets/frasco.png";
 import logo from "@/assets/logo.png";
@@ -127,13 +128,25 @@ function Hero() {
             alt="Frasco Flor do Oriente — Complexo Hanakōrei 24h"
             className="relative w-full max-w-md mx-auto drop-shadow-[0_30px_50px_oklch(0.30_0.045_165/0.35)]"
           />
-          <div className="absolute top-6 -left-2 md:left-4 bg-card shadow-card rounded-2xl px-4 py-3 text-xs font-medium rotate-[-6deg]">
+          <div className="absolute top-4 -left-2 md:left-0 bg-card shadow-card rounded-2xl px-4 py-3 text-xs font-medium rotate-[-6deg]">
             <div className="text-primary font-semibold">60 cápsulas</div>
             <div className="text-muted-foreground">Manhã + Noite</div>
           </div>
-          <div className="absolute bottom-10 -right-2 md:right-4 bg-card shadow-card rounded-2xl px-4 py-3 text-xs font-medium rotate-[5deg]">
+          <div className="absolute top-1/3 -right-3 md:-right-2 bg-card shadow-card rounded-2xl px-4 py-3 text-xs font-medium rotate-[4deg]">
+            <div className="text-primary font-semibold flex items-center gap-1"><Award className="w-3.5 h-3.5 text-gold" /> Selo ANVISA</div>
+            <div className="text-muted-foreground">Fórmula registrada</div>
+          </div>
+          <div className="absolute bottom-24 -left-3 md:left-0 bg-card shadow-card rounded-2xl px-4 py-3 text-xs font-medium rotate-[-4deg]">
+            <div className="text-primary font-semibold flex items-center gap-1"><Sparkles className="w-3.5 h-3.5 text-gold" /> 7 ativos</div>
+            <div className="text-muted-foreground">em 1 cápsula</div>
+          </div>
+          <div className="absolute bottom-8 -right-2 md:right-2 bg-card shadow-card rounded-2xl px-4 py-3 text-xs font-medium rotate-[5deg]">
             <div className="text-primary font-semibold flex items-center gap-1"><Star className="w-3 h-3 fill-gold text-gold" /> +12.000 mulheres</div>
             <div className="text-muted-foreground">resultado em ondas</div>
+          </div>
+          <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-card shadow-card rounded-2xl px-4 py-3 text-xs font-medium rotate-[-2deg]">
+            <div className="text-primary font-semibold flex items-center gap-1"><Shield className="w-3.5 h-3.5 text-cta" /> Garantia 90 dias</div>
+            <div className="text-muted-foreground">Risco zero</div>
           </div>
         </div>
       </div>
