@@ -107,4 +107,47 @@
     background-size: 40px 20px;
     background-position: 0 0, 20px 10px;
   }
+
+  /* Marker highlight (pink/rose) — like a highlighter stroke */
+  .marker {
+    background-image: linear-gradient(
+      to bottom,
+      transparent 6%,
+      oklch(0.82 0.14 15 / 0.85) 6%,
+      oklch(0.78 0.17 18 / 0.9) 50%,
+      oklch(0.82 0.14 15 / 0.85) 94%,
+      transparent 94%
+    );
+    padding: 0 0.18em;
+    color: oklch(0.32 0.15 20);
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+  }
+
+  /* Shimmer sweep on badges & buttons */
+  .shine {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+  }
+  .shine::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      110deg,
+      transparent 30%,
+      oklch(1 0 0 / 0.55) 50%,
+      transparent 70%
+    );
+    transform: translateX(-120%);
+    animation: shine-sweep 3.2s ease-in-out infinite;
+    pointer-events: none;
+    mix-blend-mode: overlay;
+  }
+  @keyframes shine-sweep {
+    0%   { transform: translateX(-120%); }
+    60%  { transform: translateX(120%); }
+    100% { transform: translateX(120%); }
+  }
 }
