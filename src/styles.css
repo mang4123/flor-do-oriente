@@ -108,20 +108,22 @@
     background-position: 0 0, 20px 10px;
   }
 
-  /* Marker highlight (pink/rose) — like a highlighter stroke */
+  /* Marker highlight — mint/teal stroke with tick marks at start & end */
   .marker {
     background-image: linear-gradient(
       to bottom,
-      transparent 6%,
-      oklch(0.82 0.14 15 / 0.85) 6%,
-      oklch(0.78 0.17 18 / 0.9) 50%,
-      oklch(0.82 0.14 15 / 0.85) 94%,
-      transparent 94%
+      transparent 10%,
+      oklch(0.78 0.075 175 / 0.55) 10%,
+      oklch(0.78 0.075 175 / 0.55) 90%,
+      transparent 90%
     );
-    padding: 0 0.18em;
-    color: oklch(0.32 0.15 20);
+    padding: 0 0.35em;
+    color: var(--primary);
     box-decoration-break: clone;
     -webkit-box-decoration-break: clone;
+    box-shadow:
+      inset 0.14em 0 0 0 oklch(0.55 0.09 175 / 0.85),
+      inset -0.14em 0 0 0 oklch(0.55 0.09 175 / 0.85);
   }
 
   /* Shimmer sweep on badges & buttons */
