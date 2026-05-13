@@ -748,6 +748,9 @@ function Kits() {
                   <span className="flex items-center gap-1"><ShieldCheck className="w-3 h-3" /> Anvisa</span>
                 </div>
               </div>
+            </div>
+          ))}
+        </div>
 
 
         <div className="mt-12 flex justify-center">
