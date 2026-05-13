@@ -600,19 +600,19 @@ function Kits() {
     {
       id: "test", topLabel: "COMPRE", highlight: "3 MESES", subtitle: "30 dias de tratamento · Onda 1",
       from: "447", price: "297", cents: ",00", installments: "ou 12x de R$30,72 sem juros",
-      shipping: "Frete fixo de R$ 9,90 para todo Brasil", units: "3 frascos",
+      shipping: "Frete grátis para todo Brasil", units: "3 frascos",
       cta: "COMPRAR AGORA", image: kit3,
     },
     {
       id: "complete", topLabel: "PROTOCOLO COMPLETO", highlight: "7 MESES", subtitle: "210 dias · Cobre as 3 ondas",
       from: "760", price: "547", cents: ",00", installments: "ou 12x de R$56,57 sem juros",
-      shipping: "+ FRETE GRÁTIS para todo Brasil", units: "7 frascos",
+      shipping: "Frete grátis para todo Brasil", units: "7 frascos",
       cta: "GARANTIR MEU KIT", featured: true, image: kit7,
     },
     {
       id: "inter", topLabel: "COMPRE", highlight: "5 MESES", subtitle: "150 dias · Ondas 1 e 2",
       from: "680", price: "397", cents: ",00", installments: "ou 12x de R$41,06 sem juros",
-      shipping: "+ FRETE GRÁTIS para todo Brasil", units: "5 frascos",
+      shipping: "Frete grátis para todo Brasil", units: "5 frascos",
       cta: "COMPRAR AGORA", image: kit5,
     },
   ];
@@ -691,9 +691,9 @@ function Kits() {
               }`}
             >
               {k.featured && (
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2 z-20">
-                  <div className="bg-cta text-cta-foreground text-[11px] font-extrabold uppercase tracking-[0.2em] px-6 py-2 rounded-full shadow-cta whitespace-nowrap">
-                    ⭐ O Mais Vendido
+                <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 z-20">
+                  <div className="bg-white text-primary text-[10px] font-semibold uppercase tracking-[0.32em] px-5 py-1.5 rounded-full border border-primary/10 shadow-soft whitespace-nowrap">
+                    Mais Vendido
                   </div>
                 </div>
               )}
@@ -704,7 +704,7 @@ function Kits() {
                 </p>
                 <div className="mt-2 inline-block">
                   <span className={`inline-block text-2xl md:text-[28px] font-extrabold uppercase tracking-tight px-4 py-1.5 rounded-xl ${
-                    k.featured ? "bg-cta text-cta-foreground" : "bg-mint text-primary"
+                    k.featured ? "bg-white text-primary" : "bg-mint text-primary"
                   }`}>
                     {k.highlight}
                   </span>
@@ -729,10 +729,10 @@ function Kits() {
                   Por apenas 12x
                 </p>
                 <p className="mt-1 leading-none">
-                  <span className={`text-5xl md:text-[56px] font-extrabold ${k.featured ? "text-cta" : "text-primary"}`}>
+                  <span className={`text-5xl md:text-[56px] font-extrabold ${k.featured ? "text-white" : "text-primary"}`}>
                     R${k.price}
                   </span>
-                  <span className={`text-2xl font-extrabold ${k.featured ? "text-cta" : "text-primary"}`}>{k.cents}</span>
+                  <span className={`text-2xl font-extrabold ${k.featured ? "text-white" : "text-primary"}`}>{k.cents}</span>
                 </p>
                 <p className={`mt-2 text-xs ${k.featured ? "text-primary-foreground/70" : "text-muted-foreground"}`}>
                   {k.installments}
@@ -742,10 +742,10 @@ function Kits() {
                   <ShoppingCart className="w-4 h-4" /> {k.cta}
                 </button>
 
-                <div className={`mt-4 flex justify-center gap-3 text-[10px] uppercase tracking-wider ${k.featured ? "text-primary-foreground/60" : "text-muted-foreground"}`}>
-                  <span className="flex items-center gap-1"><Lock className="w-3 h-3" /> SSL</span>
-                  <span className="flex items-center gap-1"><Award className="w-3 h-3" /> 90d</span>
-                  <span className="flex items-center gap-1"><ShieldCheck className="w-3 h-3" /> ANVISA</span>
+                <div className={`mt-4 flex justify-center gap-4 text-[10px] uppercase tracking-wider ${k.featured ? "text-primary-foreground/70" : "text-muted-foreground"}`}>
+                  <span className="flex items-center gap-1"><Lock className="w-3 h-3" /> Site seguro</span>
+                  <span className="flex items-center gap-1"><Award className="w-3 h-3" /> Garantia 90 dias</span>
+                  <span className="flex items-center gap-1"><ShieldCheck className="w-3 h-3" /> Anvisa</span>
                 </div>
               </div>
             </div>
