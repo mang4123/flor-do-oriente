@@ -600,19 +600,19 @@ function Kits() {
     {
       id: "test", topLabel: "COMPRE", highlight: "3 MESES", subtitle: "30 dias de tratamento · Onda 1",
       from: "447", price: "297", cents: ",00", installments: "ou 12x de R$30,72 sem juros",
-      shipping: "Frete fixo de R$ 9,90 para todo Brasil", units: "3 frascos",
+      shipping: "Frete grátis para todo Brasil", units: "3 frascos",
       cta: "COMPRAR AGORA", image: kit3,
     },
     {
       id: "complete", topLabel: "PROTOCOLO COMPLETO", highlight: "7 MESES", subtitle: "210 dias · Cobre as 3 ondas",
       from: "760", price: "547", cents: ",00", installments: "ou 12x de R$56,57 sem juros",
-      shipping: "+ FRETE GRÁTIS para todo Brasil", units: "7 frascos",
+      shipping: "Frete grátis para todo Brasil", units: "7 frascos",
       cta: "GARANTIR MEU KIT", featured: true, image: kit7,
     },
     {
       id: "inter", topLabel: "COMPRE", highlight: "5 MESES", subtitle: "150 dias · Ondas 1 e 2",
       from: "680", price: "397", cents: ",00", installments: "ou 12x de R$41,06 sem juros",
-      shipping: "+ FRETE GRÁTIS para todo Brasil", units: "5 frascos",
+      shipping: "Frete grátis para todo Brasil", units: "5 frascos",
       cta: "COMPRAR AGORA", image: kit5,
     },
   ];
