@@ -598,7 +598,7 @@ function Objections() {
 function Kits() {
   const kits = [
     {
-      id: "test", topLabel: "COMPRE", highlight: "3 MESES", subtitle: "30 dias de tratamento · Onda 1",
+      id: "test", topLabel: "COMPRE", highlight: "3 MESES", subtitle: "90 dias de tratamento · Onda 1",
       from: "447", price: "297", cents: ",00", installments: "ou 12x de R$30,72 sem juros",
       shipping: "Frete grátis para todo Brasil", units: "3 frascos",
       cta: "COMPRAR AGORA", image: kit3,
