@@ -636,47 +636,47 @@ function Kits() {
           </div>
         </div>
 
-        <div className="mt-12 rounded-3xl bg-card border-2 border-cta/30 p-6 md:p-8 shadow-card max-w-3xl mx-auto relative overflow-hidden">
-          <div className="absolute top-0 right-0 bg-cta text-cta-foreground text-[10px] md:text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-bl-2xl">
+        <div className="mt-12 rounded-3xl bg-card border-2 border-primary/30 p-6 md:p-8 shadow-card max-w-3xl mx-auto relative overflow-hidden">
+          <div className="absolute top-0 right-0 bg-primary text-primary-foreground text-[10px] md:text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-bl-2xl">
             🎁 Tudo incluso
           </div>
           <p className="text-base md:text-lg font-bold text-primary mb-1">Ao iniciar o protocolo, você leva também:</p>
           <p className="text-sm text-muted-foreground mb-5">3 bônus exclusivos + frete + garantia, sem custo adicional</p>
           <ul className="space-y-2.5 text-sm">
             <li className="flex items-center gap-3 pb-2.5 border-b border-border/40">
-              <Check className="w-5 h-5 text-cta shrink-0" />
+              <Check className="w-5 h-5 text-primary shrink-0" />
               <span className="flex-1 text-foreground/90">Frascos do <strong>Complexo Hanakōrei 24h</strong></span>
               <span className="text-xs font-semibold text-primary">incluso</span>
             </li>
             <li className="flex items-center gap-3 pb-2.5 border-b border-border/40">
-              <Check className="w-5 h-5 text-cta shrink-0" />
+              <Check className="w-5 h-5 text-primary shrink-0" />
               <span className="flex-1 text-foreground/90">BÔNUS · Guia "Protocolo 24h"</span>
-              <span className="text-xs"><span className="line-through text-muted-foreground">R$97</span> <span className="font-bold text-cta">GRÁTIS</span></span>
+              <span className="text-xs"><span className="line-through text-muted-foreground">R$97</span> <span className="font-bold text-primary">GRÁTIS</span></span>
             </li>
             <li className="flex items-center gap-3 pb-2.5 border-b border-border/40">
-              <Check className="w-5 h-5 text-cta shrink-0" />
+              <Check className="w-5 h-5 text-primary shrink-0" />
               <span className="flex-1 text-foreground/90">BÔNUS · Grupo VIP no WhatsApp</span>
-              <span className="text-xs"><span className="line-through text-muted-foreground">R$197</span> <span className="font-bold text-cta">GRÁTIS</span></span>
+              <span className="text-xs"><span className="line-through text-muted-foreground">R$197</span> <span className="font-bold text-primary">GRÁTIS</span></span>
             </li>
             <li className="flex items-center gap-3 pb-2.5 border-b border-border/40">
-              <Check className="w-5 h-5 text-cta shrink-0" />
+              <Check className="w-5 h-5 text-primary shrink-0" />
               <span className="flex-1 text-foreground/90">BÔNUS · E-book "7 hábitos da pele jovem"</span>
-              <span className="text-xs"><span className="line-through text-muted-foreground">R$47</span> <span className="font-bold text-cta">GRÁTIS</span></span>
+              <span className="text-xs"><span className="line-through text-muted-foreground">R$47</span> <span className="font-bold text-primary">GRÁTIS</span></span>
             </li>
             <li className="flex items-center gap-3 pb-2.5 border-b border-border/40">
-              <Check className="w-5 h-5 text-cta shrink-0" />
+              <Check className="w-5 h-5 text-primary shrink-0" />
               <span className="flex-1 text-foreground/90">Entrega rastreada para todo o Brasil</span>
-              <span className="text-xs font-bold text-cta">FRETE GRÁTIS</span>
+              <span className="text-xs font-bold text-primary">FRETE GRÁTIS</span>
             </li>
             <li className="flex items-center gap-3">
-              <Check className="w-5 h-5 text-cta shrink-0" />
+              <Check className="w-5 h-5 text-primary shrink-0" />
               <span className="flex-1 text-foreground/90">Garantia blindada de 90 dias</span>
               <span className="text-xs font-semibold text-primary">incluso</span>
             </li>
           </ul>
-          <div className="mt-5 pt-4 border-t-2 border-dashed border-cta/40 flex items-center justify-between">
+          <div className="mt-5 pt-4 border-t-2 border-dashed border-primary/40 flex items-center justify-between">
             <span className="text-sm font-semibold text-primary">Valor total em bônus:</span>
-            <span className="text-lg font-bold text-cta">+R$341 grátis</span>
+            <span className="text-lg font-bold text-primary">+R$341 grátis</span>
           </div>
         </div>
 
