@@ -598,25 +598,22 @@ function Objections() {
 function Kits() {
   const kits = [
     {
-      id: "test", name: "Kit Teste", months: "3 meses", desc: "Apenas a Onda 1",
-      from: "447", price: "297", installments: "12x de R$30,72", units: "3 frascos",
+      id: "test", topLabel: "COMPRE", highlight: "3 MESES", subtitle: "30 dias de tratamento · Onda 1",
+      from: "447", price: "297", cents: ",00", installments: "ou 12x de R$30,72 sem juros",
+      shipping: "Frete fixo de R$ 9,90 para todo Brasil", units: "3 frascos",
       cta: "COMPRAR AGORA", image: kit3,
     },
     {
-      id: "inter", name: "Kit Intermediário", months: "5 meses", desc: "Ondas 1 e 2",
-      from: "680", price: "397", installments: "12x de R$41,06", units: "5 frascos",
+      id: "complete", topLabel: "PROTOCOLO COMPLETO", highlight: "7 MESES", subtitle: "210 dias · Cobre as 3 ondas",
+      from: "760", price: "547", cents: ",00", installments: "ou 12x de R$56,57 sem juros",
+      shipping: "+ FRETE GRÁTIS para todo Brasil", units: "7 frascos",
+      cta: "GARANTIR MEU KIT", featured: true, image: kit7,
+    },
+    {
+      id: "inter", topLabel: "COMPRE", highlight: "5 MESES", subtitle: "150 dias · Ondas 1 e 2",
+      from: "680", price: "397", cents: ",00", installments: "ou 12x de R$41,06 sem juros",
+      shipping: "+ FRETE GRÁTIS para todo Brasil", units: "5 frascos",
       cta: "COMPRAR AGORA", image: kit5,
-    },
-    {
-      id: "complete", name: "Kit Completo", months: "7 meses", desc: "Todas as 3 ondas",
-      from: "760", price: "547", installments: "12x de R$56,57 sem juros", units: "7 frascos",
-      cta: "GARANTIR MEU KIT",
-      featured: true, image: kit7,
-    },
-    {
-      id: "annual", name: "Kit Anual", months: "12 meses", desc: "Menor custo por mês (R$66/mês)",
-      from: "1.150", price: "797", installments: "12x de R$82,43", units: "12 frascos",
-      cta: "COMPRAR AGORA", image: kit12,
     },
   ];
   return (
@@ -683,50 +680,72 @@ function Kits() {
           </div>
         </div>
 
-        <div className="mt-12 grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="mt-12 grid md:grid-cols-3 gap-6 md:gap-5 max-w-5xl mx-auto items-stretch">
           {kits.map((k) => (
             <div
               key={k.id}
-              className={`relative rounded-3xl overflow-hidden border bg-card flex flex-col ${
+              className={`relative rounded-3xl overflow-visible flex flex-col ${
                 k.featured
-                  ? "border-cta shadow-card md:-translate-y-3 ring-2 ring-cta/20"
-                  : "border-border/60 shadow-soft"
+                  ? "bg-deep text-primary-foreground shadow-card md:-translate-y-4 md:scale-[1.04] ring-2 ring-cta/40 z-10"
+                  : "bg-card text-primary border border-border/60 shadow-soft"
               }`}
             >
               {k.featured && (
-                <div className="absolute top-0 left-0 right-0 bg-cta text-cta-foreground text-center text-xs font-bold uppercase tracking-widest py-2">
-                  ⭐ Mais escolhido
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2 z-20">
+                  <div className="bg-cta text-cta-foreground text-[11px] font-extrabold uppercase tracking-[0.2em] px-6 py-2 rounded-full shadow-cta whitespace-nowrap">
+                    ⭐ O Mais Vendido
+                  </div>
                 </div>
               )}
-              <div className={`p-6 ${k.featured ? "pt-12" : ""} ${k.featured ? "bg-deep text-primary-foreground" : "bg-mint-grad text-primary"}`}>
-                <p className="text-xs uppercase tracking-widest opacity-80">{k.name}</p>
-                <h3 className="text-3xl font-semibold mt-1">{k.months}</h3>
-                <p className={`text-sm mt-1 ${k.featured ? "text-accent" : "text-primary/70"}`}>{k.desc}</p>
-              </div>
-              <div className="p-6 flex-1 flex flex-col">
-                <div className="flex items-center justify-center mb-4">
-                  <img src={k.image} alt={`${k.units} Flor do Oriente`} className="h-40 object-contain" />
-                </div>
-                <p className="text-xs text-muted-foreground line-through text-center">De R${k.from},00 por</p>
-                <p className="text-center mt-1">
-                  <span className="text-4xl font-bold text-primary">R${k.price}</span>
+
+              <div className="px-6 pt-8 pb-3 text-center">
+                <p className={`text-xs font-bold uppercase tracking-[0.2em] ${k.featured ? "text-accent" : "text-muted-foreground"}`}>
+                  {k.topLabel}
                 </p>
-                <p className="text-center text-sm text-muted-foreground mt-1">{k.installments}</p>
+                <div className="mt-2 inline-block">
+                  <span className={`inline-block text-2xl md:text-[28px] font-extrabold uppercase tracking-tight px-4 py-1.5 rounded-xl ${
+                    k.featured ? "bg-cta text-cta-foreground" : "bg-mint text-primary"
+                  }`}>
+                    {k.highlight}
+                  </span>
+                </div>
+                <p className={`mt-3 text-xs ${k.featured ? "text-primary-foreground/70" : "text-muted-foreground"}`}>
+                  {k.subtitle}
+                </p>
+              </div>
 
-                <ul className="mt-5 space-y-1.5 text-sm text-foreground/80">
-                  <li className="flex gap-2"><Check className="w-4 h-4 text-cta shrink-0 mt-0.5" /> {k.units} · 60 caps cada</li>
-                  <li className="flex gap-2"><Check className="w-4 h-4 text-cta shrink-0 mt-0.5" /> Todos os bônus</li>
-                  <li className="flex gap-2"><Check className="w-4 h-4 text-cta shrink-0 mt-0.5" /> Frete grátis</li>
-                  <li className="flex gap-2"><Check className="w-4 h-4 text-cta shrink-0 mt-0.5" /> Garantia de 90 dias</li>
-                </ul>
+              <div className="px-6 flex items-center justify-center min-h-[180px]">
+                <img src={k.image} alt={`${k.units} Flor do Oriente`} className="h-44 object-contain drop-shadow-xl" />
+              </div>
 
-                <button className="mt-6 w-full inline-flex items-center justify-center gap-2 rounded-full bg-cta text-cta-foreground font-semibold py-4 text-sm shadow-cta hover:brightness-110 transition uppercase tracking-wide">
+              <div className="px-6 pb-6 pt-2 flex-1 flex flex-col text-center">
+                <p className={`text-sm font-semibold ${k.featured ? "text-accent" : "text-cta"}`}>
+                  {k.shipping}
+                </p>
+                <p className={`mt-3 text-sm line-through ${k.featured ? "text-primary-foreground/50" : "text-muted-foreground"}`}>
+                  de R${k.from},00
+                </p>
+                <p className={`text-[11px] uppercase tracking-widest mt-0.5 ${k.featured ? "text-primary-foreground/70" : "text-muted-foreground"}`}>
+                  Por apenas 12x
+                </p>
+                <p className="mt-1 leading-none">
+                  <span className={`text-5xl md:text-[56px] font-extrabold ${k.featured ? "text-cta" : "text-primary"}`}>
+                    R${k.price}
+                  </span>
+                  <span className={`text-2xl font-extrabold ${k.featured ? "text-cta" : "text-primary"}`}>{k.cents}</span>
+                </p>
+                <p className={`mt-2 text-xs ${k.featured ? "text-primary-foreground/70" : "text-muted-foreground"}`}>
+                  {k.installments}
+                </p>
+
+                <button className="mt-6 w-full inline-flex items-center justify-center gap-2 rounded-xl bg-cta text-cta-foreground font-extrabold py-4 text-sm shadow-cta hover:brightness-110 transition uppercase tracking-wide shine-btn">
                   <ShoppingCart className="w-4 h-4" /> {k.cta}
                 </button>
-                <div className="mt-4 flex justify-around text-[10px] text-muted-foreground uppercase tracking-wider">
-                  <span className="flex flex-col items-center gap-1"><Lock className="w-3.5 h-3.5" /> Seguro</span>
-                  <span className="flex flex-col items-center gap-1"><Award className="w-3.5 h-3.5" /> Garantia</span>
-                  <span className="flex flex-col items-center gap-1"><ShieldCheck className="w-3.5 h-3.5" /> Privado</span>
+
+                <div className={`mt-4 flex justify-center gap-3 text-[10px] uppercase tracking-wider ${k.featured ? "text-primary-foreground/60" : "text-muted-foreground"}`}>
+                  <span className="flex items-center gap-1"><Lock className="w-3 h-3" /> SSL</span>
+                  <span className="flex items-center gap-1"><Award className="w-3 h-3" /> 90d</span>
+                  <span className="flex items-center gap-1"><ShieldCheck className="w-3 h-3" /> ANVISA</span>
                 </div>
               </div>
             </div>
