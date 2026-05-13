@@ -691,9 +691,9 @@ function Kits() {
               }`}
             >
               {k.featured && (
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2 z-20">
-                  <div className="bg-cta text-cta-foreground text-[11px] font-extrabold uppercase tracking-[0.2em] px-6 py-2 rounded-full shadow-cta whitespace-nowrap">
-                    ⭐ O Mais Vendido
+                <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 z-20">
+                  <div className="bg-white text-primary text-[10px] font-semibold uppercase tracking-[0.32em] px-5 py-1.5 rounded-full border border-primary/10 shadow-soft whitespace-nowrap">
+                    Mais Vendido
                   </div>
                 </div>
               )}
@@ -704,7 +704,7 @@ function Kits() {
                 </p>
                 <div className="mt-2 inline-block">
                   <span className={`inline-block text-2xl md:text-[28px] font-extrabold uppercase tracking-tight px-4 py-1.5 rounded-xl ${
-                    k.featured ? "bg-cta text-cta-foreground" : "bg-mint text-primary"
+                    k.featured ? "bg-white text-primary" : "bg-mint text-primary"
                   }`}>
                     {k.highlight}
                   </span>
@@ -729,10 +729,10 @@ function Kits() {
                   Por apenas 12x
                 </p>
                 <p className="mt-1 leading-none">
-                  <span className={`text-5xl md:text-[56px] font-extrabold ${k.featured ? "text-cta" : "text-primary"}`}>
+                  <span className={`text-5xl md:text-[56px] font-extrabold ${k.featured ? "text-white" : "text-primary"}`}>
                     R${k.price}
                   </span>
-                  <span className={`text-2xl font-extrabold ${k.featured ? "text-cta" : "text-primary"}`}>{k.cents}</span>
+                  <span className={`text-2xl font-extrabold ${k.featured ? "text-white" : "text-primary"}`}>{k.cents}</span>
                 </p>
                 <p className={`mt-2 text-xs ${k.featured ? "text-primary-foreground/70" : "text-muted-foreground"}`}>
                   {k.installments}
@@ -742,15 +742,12 @@ function Kits() {
                   <ShoppingCart className="w-4 h-4" /> {k.cta}
                 </button>
 
-                <div className={`mt-4 flex justify-center gap-3 text-[10px] uppercase tracking-wider ${k.featured ? "text-primary-foreground/60" : "text-muted-foreground"}`}>
-                  <span className="flex items-center gap-1"><Lock className="w-3 h-3" /> SSL</span>
-                  <span className="flex items-center gap-1"><Award className="w-3 h-3" /> 90d</span>
-                  <span className="flex items-center gap-1"><ShieldCheck className="w-3 h-3" /> ANVISA</span>
+                <div className={`mt-4 flex justify-center gap-4 text-[10px] uppercase tracking-wider ${k.featured ? "text-primary-foreground/70" : "text-muted-foreground"}`}>
+                  <span className="flex items-center gap-1"><Lock className="w-3 h-3" /> Site seguro</span>
+                  <span className="flex items-center gap-1"><Award className="w-3 h-3" /> Garantia 90 dias</span>
+                  <span className="flex items-center gap-1"><ShieldCheck className="w-3 h-3" /> Anvisa</span>
                 </div>
               </div>
-            </div>
-          ))}
-        </div>
 
 
         <div className="mt-12 flex justify-center">
