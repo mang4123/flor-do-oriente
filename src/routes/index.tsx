@@ -598,25 +598,22 @@ function Objections() {
 function Kits() {
   const kits = [
     {
-      id: "test", name: "Kit Teste", months: "3 meses", desc: "Apenas a Onda 1",
-      from: "447", price: "297", installments: "12x de R$30,72", units: "3 frascos",
+      id: "test", topLabel: "COMPRE", highlight: "3 MESES", subtitle: "30 dias de tratamento · Onda 1",
+      from: "447", price: "297", cents: ",00", installments: "ou 12x de R$30,72 sem juros",
+      shipping: "Frete fixo de R$ 9,90 para todo Brasil", units: "3 frascos",
       cta: "COMPRAR AGORA", image: kit3,
     },
     {
-      id: "inter", name: "Kit Intermediário", months: "5 meses", desc: "Ondas 1 e 2",
-      from: "680", price: "397", installments: "12x de R$41,06", units: "5 frascos",
+      id: "complete", topLabel: "PROTOCOLO COMPLETO", highlight: "7 MESES", subtitle: "210 dias · Cobre as 3 ondas",
+      from: "760", price: "547", cents: ",00", installments: "ou 12x de R$56,57 sem juros",
+      shipping: "+ FRETE GRÁTIS para todo Brasil", units: "7 frascos",
+      cta: "GARANTIR MEU KIT", featured: true, image: kit7,
+    },
+    {
+      id: "inter", topLabel: "COMPRE", highlight: "5 MESES", subtitle: "150 dias · Ondas 1 e 2",
+      from: "680", price: "397", cents: ",00", installments: "ou 12x de R$41,06 sem juros",
+      shipping: "+ FRETE GRÁTIS para todo Brasil", units: "5 frascos",
       cta: "COMPRAR AGORA", image: kit5,
-    },
-    {
-      id: "complete", name: "Kit Completo", months: "7 meses", desc: "Todas as 3 ondas",
-      from: "760", price: "547", installments: "12x de R$56,57 sem juros", units: "7 frascos",
-      cta: "GARANTIR MEU KIT",
-      featured: true, image: kit7,
-    },
-    {
-      id: "annual", name: "Kit Anual", months: "12 meses", desc: "Menor custo por mês (R$66/mês)",
-      from: "1.150", price: "797", installments: "12x de R$82,43", units: "12 frascos",
-      cta: "COMPRAR AGORA", image: kit12,
     },
   ];
   return (
