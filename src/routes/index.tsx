@@ -29,6 +29,23 @@ import selosGarantia from "@/assets/selos-garantia.png";
 import logo from "@/assets/logo.png";
 
 export const Route = createFileRoute("/")({
+  head: () => ({
+    links: [{ rel: "canonical", href: "/" }],
+    meta: [{ property: "og:url", content: "/" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Product",
+          name: "Complexo Hanakōrei 24h",
+          brand: { "@type": "Brand", name: "Flor do Oriente" },
+          description:
+            "Protocolo de dose dupla 24h com Trans-Resveratrol, Colágeno, Ácido Hialurônico e Vitaminas C+E. Garantia de 90 dias.",
+        }),
+      },
+    ],
+  }),
   component: LandingPage,
 });
 
