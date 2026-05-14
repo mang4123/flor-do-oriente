@@ -72,12 +72,25 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Flor do Oriente — Complexo Hanakōrei 24h | Pele firme dos 40 aos 70" },
+      { title: "Flor do Oriente — Complexo Hanakōrei 24h" },
       { name: "description", content: "Protocolo de dose dupla 24h com Trans-Resveratrol, Colágeno, Ácido Hialurônico e Vitaminas C+E. Garantia de 90 dias." },
       { property: "og:title", content: "Flor do Oriente — Complexo Hanakōrei 24h" },
       { property: "og:description", content: "A única fórmula que religa o ciclo de regeneração da sua pele. Protocolo 24h, manhã e noite." },
       { property: "og:type", content: "website" },
+      { property: "og:site_name", content: "Flor do Oriente" },
       { name: "twitter:card", content: "summary_large_image" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          name: "Flor do Oriente",
+          url: "/",
+          email: "contato@flordooriente.com.br",
+        }),
+      },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
